@@ -41,7 +41,7 @@ pip install -r requirements.txt
 Debes crear un archivo `.env` en el directorio raíz con el siguiente contenido:
 
 ```
-BASE_URL=http://localhost:8000
+BASE_URL=< URL_BASE_DEL_PROYECTO >
 URLS_FILE=urls.json
 ```
 
@@ -54,10 +54,10 @@ Ejecutar el servidor:
 uvicorn main:app --reload
 ```
 
-Accede en el navegador a: [http://localhost:8000](http://localhost:8000)
+Accede en el navegador a: [URL_BASE_DEL_PROYECTO](URL_BASE_DEL_PROYECTO)
 
 1. Introduce una URL en el formulario y haz clic en acortar.
-2. Obtendrás una URL como `http://localhost:8000/abc123`.
+2. Obtendrás una URL como `http://URL_BASE_DEL_PROYECTO/abc123`.
 3. Visítala y serás redirigido a la URL original.
 
 ---
