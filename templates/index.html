@@ -1,1 +1,29 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Acortador de URL</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <h1 class="text-center mb-4">Acortador de URL</h1>
+        <div class="card shadow-sm p-4">
+            <form action="/shorten" method="post">
+                <label for="url"> Introduce la url con formato "https://url_a_acortar" (no olvides incluir https)</label>
+                <div class="mb-3">
+                    <input type="url" name="url" class="form-control" placeholder="Introduce la URL" required>
+                </div>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary">Acortar</button>
+                </div>
+            </form>
+            {% if short_url %}
+                <div class="alert alert-success mt-4" role="alert">
+                    URL acortada: <a href="{{ short_url }}" class="alert-link">{{ short_url }}</a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
